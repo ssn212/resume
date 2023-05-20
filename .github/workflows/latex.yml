@@ -12,7 +12,7 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Delete
+      - name: Delete Previous PDF
         uses: ame-yu/action-delete-latest-release@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
