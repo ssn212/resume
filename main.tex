@@ -1,0 +1,149 @@
+%-------------------------
+% Resume in Latex
+% Author : Aju Tamang
+%------------------------
+
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Aju Tamang}}\\
+	aju.tamang@email.com $\cdot$ https://csaju.com/about $\cdot$ +01 0000000 $\cdot$ https://linkedin.com/in/aju-tamang/\\
+\end{center}
+
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Innovate Tech} \hfill Kathmandu, Nepal\\
+\textit{DevOps Engineer} \hfill Jun 2021 - Jan 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Migrated the landing pages of mysecondteacher to an EKS cluster, improving scalability and performance
+	\item Automated AWS infrastructure for multiple websites, including Advanced Pedagogy, mysecondteacher, and Jelajahilmu, reducing manual effort and improving reliability
+	\item Built Gitlab CI/CD pipeline for mysecondteacher services with custom helm chart on EKS, streamlining the deployment process and enabling faster updates
+	\item Setup centralized CMS server via Terraform, allowing for efficient management of content across multiple sub-region landing sites
+	\item Implemented Hubot ChatBot for ChatOps, simplifying Kubernetes resource management and improving collaboration among team members
+	\item Conducted AWS security audit on mysecondteacher services and implemented improvements based on findings, enhancing security and reducing potential for outages
+	\item Mentored newly hired DevOps engineers, contributing to the growth and success of the team
+\end{itemize}
+\textbf{ESR Tech} \hfill Remote\\
+\textit{DevSecOps Intern} \hfill Feb 2021 - April 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Patched vulnerabilities on the ESR Tech official site and Jenkins, enhancing security and reducing potential for attacks
+	\item Setup monitoring dashboard with SLI based on I/O, CPU, memory, and network usage, providing real-time visibility into system performance and enabling early detection of potential issues
+\end{itemize}
+\textbf{Techkraft} \hfill Remote\\
+\textit{Cloud Developer Apprentice} \hfill Aug 2020 - Dec 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Built and deployed containerized multiple services in AWS EC2, enabling faster and more efficient deployment of applications
+	\item Demonstrated hands-on experience with AWS and the Pub-Sub pattern using Rabbit MQ, showcasing expertise in modern cloud computing and messaging technologies
+\end{itemize}
+\textbf{Insight Workshop} \hfill Remote\\
+\textit{Software Engineer Trainee} \hfill Jun 2020 - Aug 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Implemented best practices for Django security, enhancing the protection of the application against potential vulnerabilities and improving overall security
+	\item Contributed to the success and reliability of the MVP by applying knowledge of Python, Django, and REST framework to create a robust and secure application
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	DevOps/SRE: & Kubernetes, Helm, AWS/GCP, Terraform, Docker, Jenkins, Gitlab CI/CD \& Github Actions      \\
+	Others:     & Python \& Django, Git \& Vim, Rust, Bash scripting, Linux, Burpsuite, Blogging, Leadership \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{Kubernetes for Everyone}}\hfill https://tryhackme.com/room/kubernetesforyouly\\
+A Kubernetes hacking challenge for DevOps/SRE enthusiasts crossed over 12,0000 participants.\\
+\vspace*{2mm}
+{\textbf{Kube-gchat}}\hfill https://github.com/Aju100/kube-gchat\\
+Kubernetes chatbot to fetch out the kubernetes resources on Google Hangout message.\\
+\vspace*{2mm}
+
+\header{Awards}
+\textbf{AWS Community Builder} \hfill AWS Cloud\\
+Advocating the developer into AWS cloud system through projects, tech talks and blog - csaju.com. \hfill Oct 2021\\
+\vspace*{2mm}
+\textbf{National Representative} \hfill Huwaei\\
+Selected as one of the 7 seeds for representing Nepal at Huawei Thailand for the Tech1Good competition Made it to the final Top 7 and participated in the Tech Good accelerator camp in Singapore. \hfill Jun 2022\\
+\vspace*{2mm}
+
+\ 
+\end{document}
